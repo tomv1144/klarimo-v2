@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Klarimo</title>
+  <meta name="description" content="Klarimo est un cabinet de conseil immobilier patrimonial indépendant, fondé par Tom Vinet. Rémunéré exclusivement sur honoraires, sans commission, sans conflit d'intérêts.">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <meta property="og:title" content="À propos — Klarimo">
+  <meta property="og:url" content="https://klarimo.fr/apropos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://klarimo.fr/klarimo-og.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-header {
+      padding: 72px 0 56px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .about-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .about-header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.15;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .about-header p {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.75;
+      max-width: 540px;
+    }
+
+    .about-section {
+      padding: 72px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .about-photo {
+      background: var(--gold-light);
+      border-radius: 12px;
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-3);
+      font-size: 13px;
+      border: 0.5px solid var(--border);
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .about-value-card {
+      background: #fff;
+      padding: 28px 24px;
+    }
+
+    .about-value-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .about-value-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .about-value-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .about-cta {
+      padding: 64px 0;
+    }
+
+    .about-cta-box {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-cta-box h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .about-cta-box p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+    }
+
+    .about-identity {
+      background: var(--gold-light);
+      border: 0.5px solid rgba(184,148,42,0.2);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-top: 32px;
+    }
+
+    .about-identity-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .about-identity-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+
+    .about-identity-item {
+      font-size: 13px;
+      color: var(--text-2);
+    }
+
+    .about-identity-item strong {
+      color: var(--navy);
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .about-layout { grid-template-columns: 1fr; gap: 32px; }
+      .about-values { grid-template-columns: 1fr; }
+      .about-cta-box { grid-template-columns: 1fr; gap: 20px; }
+      .about-identity-items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html" class="active">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Parler de ma situation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="about-header">
+      <div class="container">
+        <p class="about-eyebrow">À propos de Klarimo</p>
+        <h1>Un conseil indépendant, sans intérêt dans votre décision.</h1>
+        <p>Klarimo est un cabinet de conseil immobilier patrimonial indépendant, fondé sur un principe simple : vous apporter un regard extérieur, chiffré et sans conflit d'intérêts, avant que vous engagiez votre capital.</p>
+      </div>
+    </div>
+
+    <!-- QUI EST TOM VINET -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-layout">
+          <div>
+            <p class="about-eyebrow">Le fondateur</p>
+            <h2 class="about-section-title">Tom Vinet</h2>
+            <p class="about-text">Klarimo est fondé par Tom Vinet, conseiller immobilier patrimonial indépendant. Sa conviction : la plupart des investisseurs et des propriétaires prennent leurs décisions immobilières sans disposer d'une analyse complète et sans intérêt commercial dans la transaction.</p>
+            <p class="about-text">Agents immobiliers, courtiers, banquiers, gestionnaires : chacun intervient avec un rôle précis et une rémunération liée à l'issue de l'opération. Klarimo intervient différemment, avec une mission unique : analyser la décision dans son ensemble et défendre uniquement les intérêts du client.</p>
+            <p class="about-text">La recommandation peut être d'acheter, de ne pas acheter, de conserver, de vendre, d'attendre ou de ne rien changer. La rémunération de Klarimo ne dépend pas de cette réponse.</p>
+
+            <div class="about-identity">
+              <p class="about-identity-label">Klarimo en quelques données</p>
+              <div class="about-identity-items">
+                <div class="about-identity-item">
+                  <strong>Statut</strong>
+                  Entreprise individuelle
+                </div>
+                <div class="about-identity-item">
+                  <strong>Code APE</strong>
+                  7022Z — Conseil pour les affaires et autres conseils de gestion
+                </div>
+                <div class="about-identity-item">
+                  <strong>Rémunération</strong>
+                  Honoraires uniquement
+                </div>
+                <div class="about-identity-item">
+                  <strong>Zone d'intervention</strong>
+                  France entière
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-photo">
+            <!-- Photo Tom Vinet à intégrer -->
+            Photo à venir
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="about-section">
+      <div class="container">
+        <p class="about-eyebrow">Ce qui nous guide</p>
+        <h2 class="about-section-title" style="max-width:480px;">Trois principes non négociables.</h2>
+
+        <div class="about-values">
+          <div class="about-value-card">
+            <p class="about-value-label">Indépendance</p>
+            <h3 class="about-value-title">Aucune commission</h3>
+            <p class="about-value-text">Klarimo est rémunéré exclusivement par ses clients, sur honoraires fixes. Jamais par une banque, un promoteur, un agent ou un assureur. La recommandation ne dépend d'aucune transaction.</p>
+          </div>
+          <div class="about-value-card">
+            <p class="about-value-label">Rigueur</p>
+            <h3 class="about-value-title">L'analyse d'abord</h3>
+            <p class="about-value-text">Chaque mission commence par les chiffres. Rendement réel, fiscalité, financement, risques : l'analyse précède toujours la recommandation. Une bonne décision ne peut pas reposer sur des approximations.</p>
+          </div>
+          <div class="about-value-card">
+            <p class="about-value-label">Clarté</p>
+            <h3 class="about-value-title">Une recommandation nette</h3>
+            <p class="about-value-text">Klarimo ne produit pas de rapports de 60 pages sans conclusion. Le résultat final est une recommandation claire, argumentée et directement actionnable : GO, GO sous conditions, ou NO-GO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="about-cta">
+      <div class="container">
+        <div class="about-cta-box">
+          <div>
+            <h2>Vous avez une décision à analyser ?</h2>
+            <p>30 minutes d'échange gratuit pour comprendre votre situation. Aucun engagement, aucune obligation de suite.</p>
+          </div>
+          <a href="contact.html" class="btn btn-gold" style="white-space:nowrap;">Parler de ma situation</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial indépendant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

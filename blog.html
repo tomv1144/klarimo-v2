@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Klarimo</title>
+  <meta name="description" content="Analyses et décryptages sur l'investissement locatif, la fiscalité immobilière et la stratégie patrimoniale. Par Klarimo, conseil immobilier indépendant.">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <meta property="og:title" content="Blog — Klarimo">
+  <meta property="og:url" content="https://klarimo.fr/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://klarimo.fr/klarimo-og.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-header {
+      padding: 72px 0 48px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .blog-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .blog-header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .blog-header p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .blog-list {
+      padding: 56px 0 80px;
+    }
+
+    .blog-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 0.5px solid var(--border);
+      text-decoration: none;
+      transition: background 0.15s;
+      align-items: start;
+    }
+
+    .blog-item:first-child { padding-top: 0; }
+    .blog-item:last-child { border-bottom: none; }
+    .blog-item:hover .blog-title { color: var(--gold); }
+
+    .blog-date {
+      font-size: 12px;
+      color: var(--text-3);
+      line-height: 1.4;
+      padding-top: 3px;
+    }
+
+    .blog-category {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .blog-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.25;
+      transition: color 0.15s;
+    }
+
+    .blog-excerpt {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+
+    .blog-read {
+      font-size: 12.5px;
+      color: var(--gold);
+    }
+
+    .blog-cta {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .blog-cta h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .blog-cta p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .blog-item { grid-template-columns: 1fr; gap: 8px; }
+      .blog-header h1 { font-size: 30px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Klarimo",
+    "description": "Analyses et décryptages sur l'investissement locatif, la fiscalité immobilière et la stratégie patrimoniale.",
+    "url": "https://klarimo.fr/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Klarimo",
+      "url": "https://klarimo.fr"
+    },
+    "inLanguage": "fr-FR"
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html" class="nav-cta">Parler de ma situation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="blog-header">
+      <div class="container">
+        <p class="blog-eyebrow">Le blog Klarimo</p>
+        <h1>Analyses et décryptages immobiliers.</h1>
+        <p>Fiscalité, rendement, structures patrimoniales et stratégie locative : des contenus indépendants pour mieux décider.</p>
+      </div>
+    </div>
+
+    <div class="blog-list">
+      <div class="container">
+
+        <a href="articles/acheter-cash-ou-credit-fiscalite-2026.html" class="blog-item">
+          <div class="blog-date">06 Juil<br>2026</div>
+          <div>
+            <div class="blog-category">Financement</div>
+            <div class="blog-title">Acheter cash ou à crédit : le vrai calcul que personne ne fait</div>
+            <div class="blog-excerpt">Payer cash pour économiser les intérêts ? C'est vrai mais incomplet. La fiscalité des intérêts et l'effet de levier changent complètement l'équation en 2026.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <a href="articles/location-meublee-ou-nue-fiscalite-2026.html" class="blog-item">
+          <div class="blog-date">26 Juin<br>2026</div>
+          <div>
+            <div class="blog-category">Fiscalité</div>
+            <div class="blog-title">Location meublée ou nue : le vrai comparatif fiscal en 2026</div>
+            <div class="blog-excerpt">Meublé ou vide, micro ou réel, amortissement ou déficit foncier. Les réformes 2025 et le nouveau statut du bailleur privé ont redistribué les cartes.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <a href="articles/dpe-rentabilite-locative-2026.html" class="blog-item">
+          <div class="blog-date">22 Juin<br>2026</div>
+          <div>
+            <div class="blog-category">Réglementation</div>
+            <div class="blog-title">DPE location 2026 : impact sur la rentabilité de votre bien locatif</div>
+            <div class="blog-excerpt">Passoires thermiques, calendrier d'interdiction, nouveaux coefficients électricité. Ce que le DPE change concrètement pour les propriétaires bailleurs en 2026.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <a href="articles/sci-lmnp-demembrement.html" class="blog-item">
+          <div class="blog-date">15 Juin<br>2026</div>
+          <div>
+            <div class="blog-category">Structuration</div>
+            <div class="blog-title">SCI, LMNP, démembrement : arrêtons de choisir une structure sans savoir pourquoi</div>
+            <div class="blog-excerpt">Tout le monde a un avis sur la meilleure structure. Peu font vraiment le calcul. La bonne structure dépend de votre situation, pas d'une règle générale.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <a href="articles/rendement-immobilier-net-net.html" class="blog-item">
+          <div class="blog-date">08 Juin<br>2026</div>
+          <div>
+            <div class="blog-category">Rendement</div>
+            <div class="blog-title">Rendement immobilier : comment calculer ce que vous gagnez vraiment</div>
+            <div class="blog-excerpt">Brut, net, net-net, TRI : quatre indicateurs, quatre réalités différentes. Pourquoi le rendement brut ne devrait jamais être le seul chiffre regardé.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <a href="articles/conseiller-immobilier-independant.html" class="blog-item">
+          <div class="blog-date">05 Juin<br>2026</div>
+          <div>
+            <div class="blog-category">Conseil</div>
+            <div class="blog-title">Conseiller immobilier indépendant : qu'est-ce que ça change vraiment ?</div>
+            <div class="blog-excerpt">La différence entre un conseil rémunéré à la transaction et un conseil rémunéré à l'heure est fondamentale. Elle change la nature même de la recommandation.</div>
+            <div class="blog-read">Lire l'article →</div>
+          </div>
+        </a>
+
+        <div class="blog-cta">
+          <h2>Une situation à analyser ?</h2>
+          <p>Ces contenus sont informatifs. Pour une analyse adaptée à votre situation précise, prenons 30 minutes ensemble.</p>
+          <a href="contact.html" class="btn btn-gold">Parler de ma situation</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial indépendant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La question qui compte : Klarimo</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #F8F7F4;
+      color: var(--navy);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER MINIMAL ── */
+    .lp-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 40px;
+      border-bottom: 0.5px solid var(--border);
+      background: rgba(248,247,244,0.96);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      position: relative;
+      top: 0;
+      z-index: 10;
+    }
+
+    .lp-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .lp-logo span { color: var(--gold); }
+
+    .lp-home-link {
+      position: absolute;
+      right: 40px;
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .lp-home-link:hover { color: var(--navy); }
+
+    /* ── HERO ── */
+    .lp-hero {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 40px 48px;
+      text-align: center;
+    }
+
+    .lp-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .lp-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .lp-hero p {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── REVEAL BOX ── */
+    .reveal-box {
+      max-width: 680px;
+      margin: 0 auto 64px;
+      padding: 0 40px;
+    }
+
+    .question-reveal {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 40px 44px;
+      text-align: center;
+    }
+
+    .question-reveal .q-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .question-reveal .q-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 24px;
+    }
+
+    .question-reveal .q-text em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .question-reveal .q-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .q-divider {
+      height: 0.5px;
+      background: rgba(255,255,255,0.12);
+      margin: 0 0 28px;
+    }
+
+    .q-transition {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+
+    .btn-reveal {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-reveal:hover { opacity: 0.88; }
+
+    /* ── QUESTIONNAIRE ── */
+    .questionnaire {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    .q-progress {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+
+    .q-dot {
+      width: 28px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--border);
+      transition: background 0.3s;
+    }
+    .q-dot.active { background: var(--gold); }
+    .q-dot.done { background: var(--navy); }
+
+    .q-step {
+      display: none;
+      animation: fadeUp 0.35s ease;
+    }
+    .q-step.visible { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-step-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .q-step-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 28px;
+      line-height: 1.25;
+    }
+
+    .q-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .q-option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.18s;
+      font-size: 15px;
+      color: var(--navy);
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .q-option:hover {
+      border-color: var(--navy);
+      background: var(--gold-light);
+    }
+    .q-option.selected {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .q-option-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      flex-shrink: 0;
+      transition: all 0.18s;
+    }
+    .q-option:hover .q-option-dot { border-color: var(--navy); }
+    .q-option.selected .q-option-dot {
+      border-color: var(--gold);
+      background: var(--gold);
+    }
+
+    /* ── RÉSULTAT ── */
+    .q-result {
+      display: none;
+      animation: fadeUp 0.4s ease;
+    }
+    .q-result.visible { display: block; }
+
+    .result-box {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      padding: 40px;
+      margin-bottom: 20px;
+    }
+
+    .result-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .result-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .result-text {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+
+    .result-cta {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .result-cta h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .result-cta p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-cta:hover { opacity: 0.88; }
+
+    .result-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-3);
+      margin-top: 16px;
+    }
+
+    /* ── SECTIONS CACHÉES ── */
+    #section-questionnaire { display: none; }
+    #section-result { display: none; }
+
+    @media (max-width: 768px) {
+      .lp-hero { padding: 48px 20px 36px; }
+      .lp-hero h1 { font-size: 34px; }
+      .reveal-box { padding: 0 20px; }
+      .questionnaire { padding: 0 20px 60px; }
+      .question-reveal { padding: 32px 24px; }
+      .question-reveal .q-text { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER MINIMAL -->
+  <header class="lp-header">
+    <a href="index.html" class="lp-logo">KLAR<span>IMO</span></a>
+    <a href="index.html" class="lp-home-link">Retour au site</a>
+  </header>
+
+  <!-- SECTION 1 : HERO + RÉVÉLATION DE LA QUESTION -->
+  <section id="section-hero">
+    <div class="lp-hero">
+      <p class="lp-eyebrow">Investissement locatif</p>
+      <h1>Avant d'acheter un bien locatif, une seule question compte vraiment.</h1>
+      <p>La voici, et ce qu'elle dit sur votre situation.</p>
+    </div>
+
+    <div class="reveal-box">
+      <div class="question-reveal">
+        <p class="q-label">La question</p>
+        <p class="q-text">
+          Combien ce bien vous rapportera-t-il vraiment <em>après impôt ?</em>
+        </p>
+        <p class="q-sub">
+          Pas le rendement brut affiché. Pas le net de charges. Ce qui reste dans votre poche une fois la fiscalité, les charges réelles et la vacance locative intégrées. C'est le seul chiffre qui compte pour décider.
+        </p>
+        <div class="q-divider"></div>
+        <p class="q-transition">Et vous, est-ce que vous le connaissez ?</p>
+        <button class="btn-reveal" onclick="startQuestionnaire()">
+          Je vérifie ma situation →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 : QUESTIONNAIRE -->
+  <section id="section-questionnaire">
+    <div class="questionnaire">
+
+      <div class="q-progress">
+        <div class="q-dot" id="dot-0"></div>
+        <div class="q-dot" id="dot-1"></div>
+        <div class="q-dot" id="dot-2"></div>
+        <div class="q-dot" id="dot-3"></div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="q-step" id="q1">
+        <p class="q-step-label">Question 1 sur 4</p>
+        <h2 class="q-step-title">Vous êtes...</h2>
+        <div class="q-options">
+          <button class="q-option" onclick="selectOption(this, 1, 'proprio')">
+            <span class="q-option-dot"></span>
+            Propriétaire de 1 à 2 biens locatifs
+          </button>
+          <button class="q-option" onclick="selectOption(this, 1, 'acheteur')">
+            <span class="q-option-dot"></span>
+            Face à un projet d'achat locatif
+          </button>
+          <button class="q-option" onclick="selectOption(this, 1, 'les-deux')">
+            <span class="q-option-dot"></span>
+            Les deux à la fois
+          </button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="q-step" id="q2">
+        <p class="q-step-label">Question 2 sur 4</p>
+        <h2 class="q-step-title">Avez-vous calculé votre rendement réel après impôt ?</h2>
+        <div class="q-options">
+          <button class="q-option" onclick="selectOption(this, 2, 'oui')">
+            <span class="q-option-dot"></span>
+            Oui, je connais mon rendement net-net précisément
+          </button>
+          <button class="q-option" onclick="selectOption(this, 2, 'approx')">
+            <span class="q-option-dot"></span>
+            Approximativement, mais pas exactement
+          </button>
+          <button class="q-option" onclick="selectOption(this, 2, 'non')">
+            <span class="q-option-dot"></span>
+            Non, je me base surtout sur le rendement brut
+          </button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="q-step" id="q3">
+        <p class="q-step-label">Question 3 sur 4</p>
+        <h2 class="q-step-title">Connaissez-vous votre tranche marginale d'imposition ?</h2>
+        <div class="q-options">
+          <button class="q-option" onclick="selectOption(this, 3, 'oui')">
+            <span class="q-option-dot"></span>
+            Oui, je sais à quelle tranche j'appartiens
+          </button>
+          <button class="q-option" onclick="selectOption(this, 3, 'non')">
+            <span class="q-option-dot"></span>
+            Non, je ne l'ai jamais vérifié
+          </button>
+          <button class="q-option" onclick="selectOption(this, 3, 'incertain')">
+            <span class="q-option-dot"></span>
+            Pas sûr, ça dépend des années
+          </button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="q-step" id="q4">
+        <p class="q-step-label">Question 4 sur 4</p>
+        <h2 class="q-step-title">Avez-vous déjà été accompagné par un conseiller immobilier indépendant ?</h2>
+        <div class="q-options">
+          <button class="q-option" onclick="selectOption(this, 4, 'oui')">
+            <span class="q-option-dot"></span>
+            Oui, j'ai déjà travaillé avec un conseiller
+          </button>
+          <button class="q-option" onclick="selectOption(this, 4, 'non')">
+            <span class="q-option-dot"></span>
+            Non, je gère seul jusqu'ici
+          </button>
+          <button class="q-option" onclick="selectOption(this, 4, 'inconnu')">
+            <span class="q-option-dot"></span>
+            Je ne savais pas que ça existait sans commission
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3 : RÉSULTAT -->
+  <section id="section-result">
+    <div class="questionnaire">
+
+      <div class="q-result visible" id="result-content">
+        <div class="result-box">
+          <p class="result-eyebrow">Votre situation</p>
+          <h2 class="result-title" id="result-title">Votre analyse</h2>
+          <p class="result-text" id="result-text"></p>
+        </div>
+
+        <div class="result-cta">
+          <h3>Prenons 30 minutes ensemble.</h3>
+          <p>Gratuit, sans engagement. On calcule votre rendement réel et on identifie ce qui peut être optimisé dans votre situation.</p>
+          <a href="contact.html" class="btn-cta">Prendre rendez-vous →</a>
+        </div>
+
+        <p class="result-note">Sans commission. Sans conflit d'intérêts. Rémunéré uniquement par vous.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const answers = {};
+
+    function startQuestionnaire() {
+      document.getElementById('section-hero').style.display = 'none';
+      document.getElementById('section-questionnaire').style.display = 'block';
+      showStep(1);
+      updateDots(0);
+    }
+
+    function showStep(n) {
+      document.querySelectorAll('.q-step').forEach(s => s.classList.remove('visible'));
+      const step = document.getElementById('q' + n);
+      if (step) {
+        step.classList.add('visible');
+        step.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function updateDots(current) {
+      for (let i = 0; i < 4; i++) {
+        const dot = document.getElementById('dot-' + i);
+        dot.classList.remove('active', 'done');
+        if (i < current) dot.classList.add('done');
+        else if (i === current) dot.classList.add('active');
+      }
+    }
+
+    function selectOption(el, questionNum, value) {
+      // Désélectionner les autres options
+      el.parentElement.querySelectorAll('.q-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      answers['q' + questionNum] = value;
+
+      // Pause courte puis passage à la suite
+      setTimeout(() => {
+        if (questionNum < 4) {
+          showStep(questionNum + 1);
+          updateDots(questionNum);
+        } else {
+          showResult();
+        }
+      }, 380);
+    }
+
+    function showResult() {
+      document.getElementById('section-questionnaire').style.display = 'none';
+      document.getElementById('section-result').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const q2 = answers['q2'];
+      const q3 = answers['q3'];
+      const q4 = answers['q4'];
+      const q1 = answers['q1'];
+
+      let title = '';
+      let text = '';
+
+      // Logique de résultat selon les réponses
+      if (q2 === 'oui' && q3 === 'oui') {
+        title = "Vous avez de bonnes bases.";
+        text = "Vous connaissez votre rendement net-net et votre tranche d'imposition. C'est déjà beaucoup mieux que la majorité des investisseurs. La vraie question suivante : votre structure juridique et fiscale est-elle vraiment optimale pour votre situation ? Un regard extérieur indépendant révèle souvent des leviers inexploités, même quand les bases sont solides.";
+      } else if (q2 === 'non' || q2 === 'approx') {
+        if (q3 === 'non' || q3 === 'incertain') {
+          title = "Il manque deux données essentielles.";
+          text = "Votre rendement réel après impôt et votre tranche marginale d'imposition sont les deux variables qui déterminent si votre investissement travaille vraiment pour vous. Sans elles, toute décision (acheter, garder, vendre, restructurer) repose sur une base incomplète. En 30 minutes, on les calcule ensemble.";
+        } else {
+          title = "Vous avez une partie du tableau.";
+          text = "Vous connaissez votre tranche d'imposition, c'est un bon départ. Mais le rendement net après impôt, qui intègre charges réelles, vacance locative, intérêts d'emprunt et fiscalité, est souvent très différent de ce que l'on anticipe. L'écart peut dépasser 3 ou 4 points de rendement. C'est ce qu'on calcule ensemble en 30 minutes.";
+        }
+      } else {
+        title = "Vous êtes mieux outillé que la moyenne.";
+        text = "Calculer son rendement net-net précisément et connaître sa tranche d'imposition, c'est déjà ce que la plupart des investisseurs ne font pas. La prochaine étape : vérifier si la structure de détention (régime fiscal, organisation juridique) est vraiment adaptée à votre situation actuelle et à vos objectifs à moyen terme.";
+      }
+
+      if (q4 === 'inconnu') {
+        text += " Et pour préciser : un conseiller indépendant est rémunéré uniquement par vous, sur honoraires fixes. Aucune commission, aucun produit à vous vendre. Son seul intérêt est votre rendement réel.";
+      }
+
+      if (q1 === 'acheteur') {
+        text += " Avant de signer une offre, ce calcul est indispensable. Le rendement affiché et le rendement réel peuvent être très différents.";
+      }
+
+      document.getElementById('result-title').textContent = title;
+      document.getElementById('result-text').textContent = text;
+    }
+  </script>
+
+</body>
+</html>

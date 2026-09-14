@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande reçue — Klarimo</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .merci-wrap {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .merci-box {
+      max-width: 560px;
+      text-align: center;
+    }
+
+    .merci-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      border: 0.5px solid rgba(184,148,42,0.3);
+    }
+
+    .merci-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--gold);
+    }
+
+    .merci-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .merci-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .merci-text {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .merci-steps {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .merci-steps-title {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .merci-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .merci-step:last-child { border-bottom: none; }
+
+    .merci-step-num {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gold);
+      width: 20px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .merci-step-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    .merci-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="merci-wrap">
+      <div class="merci-box">
+
+        <div class="merci-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+
+        <p class="merci-eyebrow">Demande reçue</p>
+        <h1 class="merci-title">Votre message a bien été transmis.</h1>
+        <p class="merci-text">Klarimo reviendra vers vous sous 24 heures pour organiser votre échange de 30 minutes. En attendant, vous pouvez aussi réserver directement un créneau.</p>
+
+        <div class="merci-steps">
+          <p class="merci-steps-title">La suite</p>
+          <div class="merci-step">
+            <span class="merci-step-num">01</span>
+            <p class="merci-step-text">Klarimo analyse votre message et revient vers vous sous 24 h pour confirmer un créneau.</p>
+          </div>
+          <div class="merci-step">
+            <span class="merci-step-num">02</span>
+            <p class="merci-step-text">Échange de 30 minutes pour comprendre votre situation, vos objectifs et vos enjeux.</p>
+          </div>
+          <div class="merci-step">
+            <span class="merci-step-num">03</span>
+            <p class="merci-step-text">Si Klarimo peut vous apporter de la valeur, une recommandation d'accompagnement vous est faite. Sinon, nous vous le disons.</p>
+          </div>
+        </div>
+
+        <div class="merci-ctas">
+          <a href="https://calendly.com/tom-vinet11/nouvelle-reunion" target="_blank" class="btn btn-gold">Réserver un créneau maintenant →</a>
+          <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial indépendant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

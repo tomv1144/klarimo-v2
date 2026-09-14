@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+
+  <!-- Background square (navy) -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="#1A2B4A"/>
+
+  <!-- Vertical bar of K -->
+  <rect x="16" y="13" width="5.5" height="38" rx="1.5" fill="#FFFFFF"/>
+
+  <!-- Upper diagonal of K — white -->
+  <line x1="21" y1="31" x2="42" y2="13" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Lower diagonal of K — gold -->
+  <line x1="21" y1="31" x2="42" y2="51" stroke="#B8942A" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Gold dot at top of upper diagonal -->
+  <circle cx="42" cy="13" r="4" fill="#B8942A"/>
+
+</svg>

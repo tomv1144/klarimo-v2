@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=DM+Sans:wght@300&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- KLAR in navy -->
+  <text
+    x="180"
+    y="54"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+    font-weight="500"
+    font-size="52"
+    letter-spacing="7"
+    fill="#1A2B4A"
+  >KLAR<tspan fill="#B8942A">IMO</tspan></text>
+
+  <!-- Gold rule -->
+  <rect x="163" y="63" width="34" height="1.5" fill="#B8942A"/>
+
+  <!-- Tagline -->
+  <text
+    x="180"
+    y="79"
+    text-anchor="middle"
+    font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="300"
+    font-size="8.5"
+    letter-spacing="3.2"
+    fill="#8A98A8"
+  >CONSEIL IMMOBILIER INDÉPENDANT</text>
+
+</svg>

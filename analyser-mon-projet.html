@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premier Regard Klarimo — Faites challenger votre projet immobilier</title>
+  <meta name="description" content="Envoyez votre annonce ou votre projet immobilier. Klarimo identifie gratuitement les points à vérifier avant que vous vous engagiez. Premier regard gratuit, sans engagement.">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <meta property="og:title" content="Premier Regard Klarimo — Faites challenger votre projet immobilier">
+  <meta property="og:description" content="Envoyez votre annonce. Klarimo identifie gratuitement les points à vérifier avant que vous vous engagiez.">
+  <meta property="og:url" content="https://klarimo.fr/analyser-mon-projet.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://klarimo.fr/klarimo-og.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero-projet { padding: 80px 0 72px; border-bottom: 0.5px solid var(--border); }
+    .hero-eyebrow { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .hero-projet h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; font-weight: 500; line-height: 1.1; color: var(--navy); max-width: 720px; margin-bottom: 20px; }
+    .hero-sub { font-size: 16px; color: var(--text-2); line-height: 1.7; max-width: 560px; margin-bottom: 28px; }
+    .hero-badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+    .badge-gratuit { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #2D7A50; background: #E8F4EE; border-radius: 5px; padding: 5px 12px; }
+    .badge-sep { font-size: 12px; color: var(--text-3); }
+    .badge-item { font-size: 12px; color: var(--text-3); }
+    .section { padding: 72px 0; border-bottom: 0.5px solid var(--border); }
+    .section-eyebrow { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; text-align: center; }
+    .section-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; font-weight: 500; color: var(--navy); text-align: center; margin-bottom: 12px; }
+    .section-note { font-size: 13px; color: var(--text-3); text-align: center; margin-bottom: 44px; font-style: italic; }
+    .regard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .regard-card { background: #fff; padding: 28px 24px; }
+    .regard-dot { width: 10px; height: 10px; border-radius: 50%; margin-bottom: 14px; }
+    .regard-dot-green { background: #2D7A50; }
+    .regard-dot-orange { background: #D97706; }
+    .regard-dot-red { background: #B02020; }
+    .regard-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+    .regard-label-green { color: #2D7A50; }
+    .regard-label-orange { color: #D97706; }
+    .regard-label-red { color: #B02020; }
+    .regard-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+    .regard-text { font-size: 13.5px; color: var(--text-2); line-height: 1.65; }
+    .form-section { padding: 72px 0; border-bottom: 0.5px solid var(--border); }
+    .form-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .form-left-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 500; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+    .form-left-text { font-size: 14px; color: var(--text-2); line-height: 1.75; margin-bottom: 24px; }
+    .form-process { display: flex; flex-direction: column; gap: 14px; }
+    .form-process-item { display: flex; align-items: flex-start; gap: 12px; }
+    .form-process-num { width: 22px; height: 22px; border-radius: 50%; background: var(--gold-light); border: 0.5px solid rgba(184,148,42,0.3); font-size: 10px; font-weight: 600; color: var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .form-process-text { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+    .form-box { background: #fff; border: 0.5px solid var(--border); border-radius: 14px; padding: 32px; }
+    .form-box-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+    .form-box-sub { font-size: 13px; color: var(--text-3); margin-bottom: 24px; line-height: 1.55; }
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 5px; }
+    .form-label .opt { font-size: 10px; color: var(--border); text-transform: none; letter-spacing: 0; font-style: italic; margin-left: 4px; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 10px 13px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 13.5px; color: var(--navy); background: var(--bg); border: 0.5px solid var(--border); border-radius: 7px; outline: none; transition: border-color 0.2s; -webkit-appearance: none; box-sizing: border-box; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--navy); }
+    .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-divider { height: 0.5px; background: var(--border); margin: 18px 0; }
+    .form-divider-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); text-align: center; display: block; margin: -20px 0 14px; background: #fff; padding: 4px 8px; width: fit-content; margin-left: auto; margin-right: auto; }
+    .form-rgpd { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; }
+    .form-rgpd input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: var(--navy); }
+    .form-rgpd-text { font-size: 12px; color: var(--text-3); line-height: 1.55; }
+    .form-submit { width: 100%; margin-top: 4px; }
+    .form-confirmation { display: none; background: var(--gold-light); border: 0.5px solid rgba(184,148,42,0.3); border-radius: 12px; padding: 28px; text-align: center; }
+    .confirm-icon { width: 48px; height: 48px; background: #E8F4EE; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .confirm-icon svg { width: 22px; height: 22px; stroke: #2D7A50; }
+    .confirm-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
+    .confirm-text { font-size: 13.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 12px; }
+    .confirm-note { font-size: 12px; color: var(--text-3); line-height: 1.55; font-style: italic; }
+    .engager-section { padding: 72px 0; border-bottom: 0.5px solid var(--border); }
+    .engager-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .engager-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 500; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+    .engager-text { font-size: 14px; color: var(--text-2); line-height: 1.75; margin-bottom: 20px; }
+    .engager-card { background: var(--navy); border-radius: 12px; padding: 32px 28px; }
+    .engager-badge { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .engager-card-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+    .engager-price { font-size: 22px; font-weight: 500; color: #fff; margin-bottom: 16px; }
+    .engager-verdicts { display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+    .vbadge { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; border-radius: 5px; padding: 5px 12px; }
+    .vbadge-go { background: #E8F4EE; color: #2D7A50; }
+    .vbadge-cond { background: #FFF3DC; color: #A0640A; }
+    .vbadge-nogo { background: #FDE8E8; color: #B02020; }
+    .engager-delay { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .reassurance-section { padding: 72px 0; border-bottom: 0.5px solid var(--border); }
+    .reassurance-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .reassurance-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; font-weight: 500; color: var(--navy); margin-bottom: 16px; line-height: 1.25; }
+    .reassurance-text { font-size: 14px; color: var(--text-2); line-height: 1.8; margin-bottom: 12px; }
+    .reassurance-highlight { background: var(--gold-light); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 14px 18px; font-size: 13.5px; color: var(--navy); line-height: 1.65; }
+    .reassurance-pillars { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .reassurance-pillar { background: #fff; padding: 20px 24px; }
+    .reassurance-pillar-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .reassurance-pillar-text { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+    .faq-section { padding: 72px 0; }
+    .faq-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 500; color: var(--navy); text-align: center; margin-bottom: 40px; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 48px; }
+    .faq-item { background: #fff; padding: 24px; }
+    .faq-q { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 8px; line-height: 1.4; }
+    .faq-a { font-size: 13.5px; color: var(--text-2); line-height: 1.7; }
+    @media (max-width: 900px) {
+      .hero-projet h1 { font-size: 34px; }
+      .regard-grid { grid-template-columns: 1fr; }
+      .form-layout { grid-template-columns: 1fr; gap: 36px; }
+      .form-row { grid-template-columns: 1fr; }
+      .engager-layout { grid-template-columns: 1fr; gap: 32px; }
+      .reassurance-layout { grid-template-columns: 1fr; gap: 32px; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hero-projet h1 { font-size: 28px; }
+      .section-title { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html">A propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Parler de ma situation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-projet">
+      <div class="container">
+        <p class="hero-eyebrow">Premier Regard Klarimo</p>
+        <h1>Vous avez trouve un bien ? Avant de faire une offre, faites-le challenger.</h1>
+        <p class="hero-sub">Envoyez-nous l'annonce ou les principaux elements de votre projet. Nous vous indiquons les points que nous verifierions en priorite avant que vous vous engagiez.</p>
+        <div class="hero-badges">
+          <span class="badge-gratuit">Premier regard gratuit</span>
+          <span class="badge-sep">·</span>
+          <span class="badge-item">Sans engagement</span>
+          <span class="badge-sep">·</span>
+          <span class="badge-item">Aucun produit a vendre</span>
+          <span class="badge-sep">·</span>
+          <span class="badge-item">Analyse independante</span>
+        </div>
+        <a href="#soumettre" class="btn btn-gold" onclick="trackEvent('click_submit_hero')">Soumettre mon projet</a>
+      </div>
+    </section>
+
+    <!-- CE QUE VOUS RECEVEZ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow">Ce que vous recevez</p>
+        <h2 class="section-title">Un premier regard structure sur votre projet.</h2>
+        <p class="section-note">Ce premier regard ne remplace pas une analyse complete et ne constitue pas un verdict definitif.</p>
+        <div class="regard-grid">
+          <div class="regard-card">
+            <div class="regard-dot regard-dot-green"></div>
+            <p class="regard-label regard-label-green">Points positifs</p>
+            <h3 class="regard-title">Ce qui semble coherent</h3>
+            <p class="regard-text">Les elements de votre projet qui paraissent coherents a premiere vue, sur la base des informations transmises.</p>
+          </div>
+          <div class="regard-card">
+            <div class="regard-dot regard-dot-orange"></div>
+            <p class="regard-label regard-label-orange">Points a verifier</p>
+            <h3 class="regard-title">Les hypotheses a confirmer</h3>
+            <p class="regard-text">Les donnees ou hypotheses qui necessitent d'etre confirmees ou approfondies avant toute decision.</p>
+          </div>
+          <div class="regard-card">
+            <div class="regard-dot regard-dot-red"></div>
+            <p class="regard-label regard-label-red">Points de vigilance</p>
+            <h3 class="regard-title">Ce qui pourrait changer le resultat</h3>
+            <p class="regard-text">Les elements qui pourraient modifier fortement la pertinence ou la rentabilite de l'operation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE -->
+    <section class="form-section" id="soumettre">
+      <div class="container">
+        <div class="form-layout">
+          <div>
+            <h2 class="form-left-title">Envoyez votre projet. On regarde ce qui compte.</h2>
+            <p class="form-left-text">Quelques elements suffisent pour commencer. Si des informations manquent, Klarimo vous le signalera.</p>
+            <div class="form-process">
+              <div class="form-process-item">
+                <span class="form-process-num">1</span>
+                <span class="form-process-text">Vous remplissez le formulaire avec les elements disponibles.</span>
+              </div>
+              <div class="form-process-item">
+                <span class="form-process-num">2</span>
+                <span class="form-process-text">Klarimo examine les principaux elements et identifie les points a verifier.</span>
+              </div>
+              <div class="form-process-item">
+                <span class="form-process-num">3</span>
+                <span class="form-process-text">Vous recevez un retour structure : positif, a verifier, vigilance.</span>
+              </div>
+              <div class="form-process-item">
+                <span class="form-process-num">4</span>
+                <span class="form-process-text">Si votre projet est avance, un Second Avis complet peut etre demande.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <p class="form-box-title">Votre projet</p>
+            <p class="form-box-sub">Les champs marques * sont obligatoires. Les autres sont facultatifs mais utiles.</p>
+
+            <form id="form-projet" name="premier-regard" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+              <input type="hidden" name="form-name" value="premier-regard">
+              <p style="display:none;"><input name="bot-field"></p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="prenom">Prenom *</label>
+                  <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Votre prenom" required onfocus="trackEvent('start_project_form')">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.fr" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="annonce">Lien de l'annonce *</label>
+                <input class="form-input" type="text" id="annonce" name="annonce" placeholder="https://www.seloger.com/..." required>
+                <p style="font-size:11px;color:var(--text-3);margin-top:4px;">SeLoger, Leboncoin, Bien'ici ou tout autre lien accessible.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="prix">Prix affiche (EUR) *</label>
+                  <input class="form-input" type="text" id="prix" name="prix" placeholder="Ex : 220 000" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ville">Ville *</label>
+                  <input class="form-input" type="text" id="ville" name="ville" placeholder="Ex : Lyon" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="type-projet">Type de projet *</label>
+                <select class="form-select" id="type-projet" name="type-projet" required>
+                  <option value="">Selectionnez...</option>
+                  <option value="locatif">Investissement locatif</option>
+                  <option value="principale">Residence principale</option>
+                  <option value="autre">Autre decision immobiliere</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="hesitation">Qu'est-ce qui vous fait hesiter ? *</label>
+                <textarea class="form-textarea" id="hesitation" name="hesitation" placeholder="Decrivez ce qui vous preoccupe, ce que vous souhaitez verifier ou ce sur quoi vous avez un doute..." required></textarea>
+              </div>
+
+              <div class="form-divider"></div>
+              <span class="form-divider-label">Informations complementaires (facultatif)</span>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="loyer">Loyer envisage (EUR/mois) <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="text" id="loyer" name="loyer" placeholder="Ex : 850">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="travaux">Travaux estimes (EUR) <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="text" id="travaux" name="travaux" placeholder="Ex : 15 000">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="apport">Apport envisage (EUR) <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="text" id="apport" name="apport" placeholder="Ex : 30 000">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="duree-credit">Duree du credit (ans) <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="text" id="duree-credit" name="duree-credit" placeholder="Ex : 20">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="taux">Taux approximatif (%) <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="text" id="taux" name="taux" placeholder="Ex : 3,3">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="telephone">Telephone <span class="opt">facultatif</span></label>
+                  <input class="form-input" type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+                </div>
+              </div>
+
+              <div class="form-rgpd">
+                <input type="checkbox" id="rgpd" name="rgpd" required>
+                <label for="rgpd" class="form-rgpd-text">
+                  J'accepte que les informations saisies soient utilisees par Klarimo pour analyser mon projet et me repondre. Conformement au RGPD, je dispose d'un droit d'acces, de rectification et de suppression de mes donnees a tout moment en contactant <a href="mailto:contact@klarimo.fr" style="color:var(--navy);">contact@klarimo.fr</a>. *
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-gold form-submit">Recevoir mon premier regard</button>
+            </form>
+
+            <div class="form-confirmation" id="form-confirmation">
+              <div class="confirm-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h3 class="confirm-title">Votre projet a bien ete transmis.</h3>
+              <p class="confirm-text">Nous examinons les principaux elements afin d'identifier les points qui meritent votre attention avant toute decision. Vous recevrez un retour sous 24 a 48 heures.</p>
+              <p class="confirm-note">Si votre projet est deja tres avance, vous pourrez ensuite demander un Second Avis Klarimo complet pour obtenir un verdict GO, GO sous conditions ou NO-GO.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ET SI VOUS ETES SUR LE POINT DE VOUS ENGAGER -->
+    <section class="engager-section">
+      <div class="container">
+        <div class="engager-layout">
+          <div>
+            <h2 class="engager-title">Vous etes proche de faire une offre ?</h2>
+            <p class="engager-text">Le Premier Regard met en evidence quelques points de vigilance. Le Second Avis Klarimo va plus loin : analyse economique complete, scenarios, risques et recommandation finale argumentee.</p>
+            <p class="engager-text">Vous obtenez une recommandation claire avant de vous engager.</p>
+            <a href="offres.html#second-avis" class="btn btn-outline" onclick="trackEvent('click_second_opinion')">Decouvrir le Second Avis</a>
+          </div>
+          <div class="engager-card">
+            <p class="engager-badge">Second Avis Immobilier</p>
+            <h3 class="engager-card-title">Analyse complete et chiffree</h3>
+            <p class="engager-price">590 EUR TTC</p>
+            <div class="engager-verdicts">
+              <span class="vbadge vbadge-go">GO</span>
+              <span class="vbadge vbadge-cond">GO sous conditions</span>
+              <span class="vbadge vbadge-nogo">NO-GO</span>
+            </div>
+            <p class="engager-delay">Sous 72 h apres reception d'un dossier complet</p>
+            <a href="offres.html#second-avis" class="btn btn-gold" style="width:100%;text-align:center;" onclick="trackEvent('click_second_opinion')">Decouvrir le Second Avis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASSURANCE -->
+    <section class="reassurance-section">
+      <div class="container">
+        <div class="reassurance-layout">
+          <div>
+            <h2 class="reassurance-title">Pourquoi Klarimo peut aussi vous dire de ne pas acheter.</h2>
+            <p class="reassurance-text">Klarimo est remunere uniquement par ses clients. Nous ne touchons aucune commission liee a l'achat, a la vente, au financement ou a un produit recommande.</p>
+            <div class="reassurance-highlight">Notre remuneration ne change pas selon la decision finale.</div>
+          </div>
+          <div class="reassurance-pillars">
+            <div class="reassurance-pillar">
+              <p class="reassurance-pillar-label">Honoraires uniquement</p>
+              <p class="reassurance-pillar-text">Remunere exclusivement par vous. Jamais par un agent, une banque ou un promoteur.</p>
+            </div>
+            <div class="reassurance-pillar">
+              <p class="reassurance-pillar-label">Aucun conflit d'interets</p>
+              <p class="reassurance-pillar-text">Klarimo n'a aucun interet dans la transaction. La recommandation depend de l'analyse, pas d'une commission potentielle.</p>
+            </div>
+            <div class="reassurance-pillar">
+              <p class="reassurance-pillar-label">Verdict independant</p>
+              <p class="reassurance-pillar-text">La reponse peut etre d'acheter, de ne pas acheter, d'attendre ou de renegocier.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Questions frequentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <p class="faq-q">Est-ce vraiment gratuit ?</p>
+            <p class="faq-a">Oui, le Premier Regard est entierement gratuit. Il permet d'identifier quelques points a verifier sur votre projet. Il ne remplace pas une analyse complete et ne constitue pas un verdict definitif.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Recevrai-je un verdict GO ou NO-GO gratuitement ?</p>
+            <p class="faq-a">Non. Le verdict complet est reserve au Second Avis Klarimo a 590 EUR TTC. Le Premier Regard identifie les points a surveiller avant de decider si une analyse complete est utile.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Quels projets puis-je soumettre ?</p>
+            <p class="faq-a">Achat de residence principale, investissement locatif, ou toute autre decision immobiliere ponctuelle : vente, travaux importants, conservation.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Puis-je envoyer une annonce Leboncoin, SeLoger ou Bien'ici ?</p>
+            <p class="faq-a">Oui, tant que l'annonce est accessible en ligne. Vous pouvez aussi decrire le bien sans annonce si vous n'en avez pas.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Et si je n'ai pas encore tous les chiffres ?</p>
+            <p class="faq-a">Envoyez les elements disponibles. Klarimo vous indiquera egalement les informations manquantes importantes pour l'analyse.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Sous quel delai vais-je recevoir le premier regard ?</p>
+            <p class="faq-a">Sous 24 a 48 heures apres reception de votre formulaire, du lundi au vendredi. Si votre decision est urgente, precisez-le dans le formulaire.</p>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <p style="font-size:14px;color:var(--text-2);margin-bottom:20px;">Une question avant de soumettre votre projet ?</p>
+          <a href="contact.html" class="btn btn-outline" onclick="trackEvent('click_contact')">Parler de ma situation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial independant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="apropos.html">A propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function trackEvent(eventName, params) {
+      params = params || {};
+      if (typeof gtag !== 'undefined') { gtag('event', eventName, params); }
+      if (typeof fbq !== 'undefined') { fbq('trackCustom', eventName, params); }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      trackEvent('view_analyser_project');
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('form-projet');
+      var data = new FormData(form);
+      trackEvent('submit_project_form', {
+        type_projet: data.get('type-projet'),
+        ville: data.get('ville')
+      });
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function() {
+        form.style.display = 'none';
+        var confirm = document.getElementById('form-confirmation');
+        confirm.style.display = 'block';
+        confirm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function() { form.submit(); });
+    }
+  </script>
+</body>
+</html>

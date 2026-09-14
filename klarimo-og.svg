@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+  <defs>
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="80" x2="80" y2="0" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background navy -->
+  <rect width="1200" height="630" fill="#1A2B4A"/>
+  <rect width="1200" height="630" fill="url(#grain)"/>
+
+  <!-- Gold accent bar left -->
+  <rect x="80" y="200" width="2" height="230" fill="#B8942A" opacity="0.6"/>
+
+  <!-- KLARIMO wordmark -->
+  <text
+    x="116"
+    y="280"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="72"
+    font-weight="400"
+    letter-spacing="10"
+    fill="#FFFFFF"
+  >KLAR<tspan fill="#B8942A">IMO</tspan></text>
+
+  <!-- Rule -->
+  <rect x="116" y="306" width="60" height="1.5" fill="#B8942A" opacity="0.7"/>
+
+  <!-- Tagline -->
+  <text
+    x="116"
+    y="334"
+    font-family="'Arial', 'Helvetica', sans-serif"
+    font-size="14"
+    letter-spacing="4"
+    fill="rgba(255,255,255,0.4)"
+  >CONSEIL IMMOBILIER INDÉPENDANT</text>
+
+  <!-- Main phrase -->
+  <text
+    x="116"
+    y="420"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="38"
+    font-weight="400"
+    fill="rgba(255,255,255,0.9)"
+    letter-spacing="0.5"
+  >Voir clair avant de décider.</text>
+
+  <!-- klarimo.fr -->
+  <text
+    x="116"
+    y="520"
+    font-family="'Arial', 'Helvetica', sans-serif"
+    font-size="16"
+    letter-spacing="2"
+    fill="rgba(255,255,255,0.25)"
+  >klarimo.fr</text>
+
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Background navy circle -->
+  <circle cx="200" cy="200" r="200" fill="#1A2B4A"/>
+
+  <!-- Vertical bar of K -->
+  <rect x="118" y="100" width="28" height="200" rx="8" fill="#FFFFFF"/>
+
+  <!-- Upper diagonal — white -->
+  <line x1="146" y1="200" x2="272" y2="100" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- Lower diagonal — gold -->
+  <line x1="146" y1="200" x2="272" y2="300" stroke="#B8942A" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- Gold dot at tip of upper diagonal -->
+  <circle cx="272" cy="100" r="22" fill="#B8942A"/>
+
+</svg>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second avis immobilier indépendant — Klarimo</title>
+  <meta name="description" content="Avant une décision immobilière importante, obtenez un second avis indépendant. Audit patrimonial, analyse investissement locatif, stratégie immobilière. 100 % honoraires, 0 % commission.">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <meta property="og:title" content="Klarimo — Conseil immobilier patrimonial indépendant">
+  <meta property="og:description" content="Avant une décision immobilière importante, obtenez un second avis indépendant. 100 % honoraires, 0 % commission.">
+  <meta property="og:url" content="https://klarimo.fr">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://klarimo.fr/klarimo-og.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      padding: 100px 0 88px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--navy);
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-3);
+      letter-spacing: 0.04em;
+      margin-bottom: 40px;
+    }
+
+    .hero-badge span { color: var(--border); }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ── SECTION GÉNÉRIQUE ───────────────────────────────── */
+    .section { padding: 88px 0; border-bottom: 0.5px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+
+    .section-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      max-width: 640px;
+    }
+
+    .section-title.centered { text-align: center; max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    .section-text {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    .section-text.centered { text-align: center; margin: 0 auto 48px; }
+
+    /* ── SECTION PROBLÈME ────────────────────────────────── */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 52px;
+    }
+
+    .problem-card {
+      background: #fff;
+      padding: 28px 24px;
+      transition: background 0.2s;
+    }
+
+    .problem-card:hover { background: var(--gold-light); }
+
+    .problem-card-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .problem-card-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    /* ── DIFFÉRENCIATION ─────────────────────────────────── */
+    .diff-section { background: var(--navy); color: #fff; }
+
+    .diff-inner { padding: 88px 0; }
+
+    .diff-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 560px;
+    }
+
+    .diff-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 48px;
+    }
+
+    .diff-verdicts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 56px;
+    }
+
+    .diff-verdict {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.35);
+      border: 0.5px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 9px 18px;
+    }
+
+    .diff-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .diff-pillar {
+      padding: 32px 28px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .diff-pillar-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .diff-pillar-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+
+    /* ── MÉTHODOLOGIE 360° ───────────────────────────────── */
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 52px;
+    }
+
+    .method-card {
+      background: #fff;
+      padding: 32px 28px;
+      transition: background 0.2s;
+    }
+
+    .method-card:hover { background: var(--gold-light); }
+
+    .method-num {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .method-card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .method-card-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .method-footnote {
+      text-align: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--text-3);
+      margin-top: 36px;
+    }
+
+    /* ── PARCOURS CLIENT ─────────────────────────────────── */
+    .parcours-steps {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr 40px 1fr;
+      align-items: center;
+      gap: 0;
+      margin-top: 52px;
+    }
+
+    .parcours-step {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+
+    .parcours-arrow {
+      text-align: center;
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    .parcours-num {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .parcours-step-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .parcours-step-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    /* ── OFFRES COMPARATEUR ──────────────────────────────── */
+    .offers-chooser {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+
+    .offer-choice {
+      background: #fff;
+      padding: 28px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .offer-choice:hover { background: var(--gold-light); }
+
+    .offer-choice-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .offer-choice-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .offer-choice-trigger {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .offer-choice-price {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+
+    .offer-choice-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--gold);
+      margin-top: 12px;
+    }
+
+    /* ── OFFRES DÉTAILLÉES ───────────────────────────────── */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .offer-card {
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer-card-header {
+      padding: 28px 28px 20px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .offer-badge {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .offer-card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .offer-price {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .offer-price span {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-3);
+    }
+
+    .offer-card-body {
+      padding: 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer-promise {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .offer-result-title {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .offer-results {
+      list-style: none;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .offer-results li {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.65;
+      padding: 6px 0;
+      border-bottom: 0.5px solid var(--border);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .offer-results li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .offer-results li:last-child { border-bottom: none; }
+
+    .offer-verdict {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .verdict-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      border-radius: 5px;
+      padding: 5px 12px;
+    }
+
+    .verdict-go   { background: #E8F4EE; color: #2D7A50; }
+    .verdict-cond { background: #FFF3DC; color: #A0640A; }
+    .verdict-nogo { background: #FDE8E8; color: #B02020; }
+
+    .offer-delay {
+      font-size: 12px;
+      color: var(--text-3);
+      margin-bottom: 16px;
+    }
+
+    .offer-card-footer {
+      padding: 20px 28px;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .offer-card.featured {
+      border-color: var(--navy);
+    }
+
+    .offer-card.featured .offer-card-header {
+      background: var(--navy);
+    }
+
+    .offer-card.featured .offer-badge { color: var(--gold); }
+    .offer-card.featured .offer-card-title { color: #fff; }
+    .offer-card.featured .offer-price { color: #fff; }
+    .offer-card.featured .offer-price span { color: rgba(255,255,255,0.4); }
+
+    /* ── COPILOTE ────────────────────────────────────────── */
+    .copilote-card {
+      background: var(--gold-light);
+      border: 0.5px solid rgba(184,148,42,0.25);
+      border-radius: 14px;
+      padding: 40px 44px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .copilote-badge {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .copilote-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .copilote-price {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .copilote-sub {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .copilote-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .copilote-item {
+      font-size: 13px;
+      color: var(--text-2);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .copilote-item::before {
+      content: '·';
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    /* ── ÉCHANGE DÉCOUVERTE ──────────────────────────────── */
+    .decouverte-box {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 56px 60px;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .decouverte-box h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .decouverte-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    /* ── CAS CLIENTS (caché, composant préparé) ──────────── */
+    .cases-section { display: none; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 38px; }
+      .problem-grid { grid-template-columns: 1fr 1fr; }
+      .method-grid { grid-template-columns: 1fr 1fr; }
+      .offers-chooser { grid-template-columns: 1fr; }
+      .offers-grid { grid-template-columns: 1fr; }
+      .diff-pillars { grid-template-columns: 1fr; }
+      .copilote-card { grid-template-columns: 1fr; }
+      .copilote-items { grid-template-columns: 1fr; }
+      .parcours-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .parcours-arrow { transform: rotate(90deg); }
+      .decouverte-box { padding: 40px 28px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 30px; }
+      .section-title { font-size: 28px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Parler de ma situation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Conseil immobilier patrimonial indépendant</p>
+        <h1>Avant une décision immobilière importante, obtenez un second avis qui n'a rien à vous vendre.</h1>
+        <p class="hero-sub">Achat, conservation, vente, fiscalité, travaux ou stratégie patrimoniale : Klarimo analyse les chiffres, les risques et les différents scénarios pour vous aider à décider avec une vision complète.</p>
+        <p class="hero-badge">
+          100 % honoraires
+          <span>·</span>
+          0 % commission
+          <span>·</span>
+          Aucun intérêt dans votre transaction
+        </p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-gold">Parler de ma situation</a>
+          <a href="analyser-mon-projet.html" class="btn btn-outline">Soumettre un projet immobilier</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         SECTION PROBLÈME
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow">Vous êtes peut-être dans cette situation</p>
+        <h2 class="section-title">Une décision immobilière peut engager plusieurs années de votre patrimoine.</h2>
+        <p class="section-text">La plupart des professionnels qui interviennent dans une opération immobilière ont un rôle précis : vendre, financer, assurer, gérer ou réaliser les travaux. Klarimo intervient différemment : nous analysons la décision dans son ensemble et sommes rémunérés uniquement par nos clients.</p>
+
+        <div class="problem-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="problem-card">
+            <p class="problem-card-label">Acheter</p>
+            <p class="problem-card-text">Vous avez trouvé un bien et vous voulez savoir si l'opération tient réellement la route.</p>
+          </div>
+          <div class="problem-card">
+            <p class="problem-card-label">Conserver</p>
+            <p class="problem-card-text">Vous possédez un bien mais vous ne savez pas s'il mérite encore de rester dans votre patrimoine.</p>
+          </div>
+          <div class="problem-card">
+            <p class="problem-card-label">Vendre</p>
+            <p class="problem-card-text">Vous hésitez à vendre et voulez mesurer les conséquences avant d'arbitrer.</p>
+          </div>
+          <div class="problem-card">
+            <p class="problem-card-label">Optimiser</p>
+            <p class="problem-card-text">Vous voulez savoir si fiscalité, financement, loyers, travaux ou structure de détention peuvent être améliorés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         DIFFÉRENCIATION
+    ══════════════════════════════════════════════ -->
+    <section class="diff-section">
+      <div class="container diff-inner">
+        <h2 class="diff-title">Notre seul intérêt : que vous preniez la bonne décision.</h2>
+        <p class="diff-text">Un agent immobilier peut être rémunéré lorsque vous achetez ou vendez. Un intermédiaire financier peut être rémunéré lorsqu'un produit est souscrit. Klarimo est rémunéré exclusivement par ses clients. La recommandation dépend de l'analyse, pas d'une commission potentielle.</p>
+
+        <div class="diff-verdicts">
+          <div class="diff-verdict">Achetez.</div>
+          <div class="diff-verdict">N'achetez pas.</div>
+          <div class="diff-verdict">Conservez.</div>
+          <div class="diff-verdict">Vendez.</div>
+          <div class="diff-verdict">Attendez.</div>
+          <div class="diff-verdict">Restructurez.</div>
+          <div class="diff-verdict">Ne changez rien.</div>
+        </div>
+
+        <div class="diff-pillars">
+          <div class="diff-pillar">
+            <p class="diff-pillar-label">Honoraires uniquement</p>
+            <p class="diff-pillar-text">Aucune commission sur les transactions. Notre rémunération est fixe, quelle que soit votre décision.</p>
+          </div>
+          <div class="diff-pillar">
+            <p class="diff-pillar-label">Analyse à 360°</p>
+            <p class="diff-pillar-text">Performance, fiscalité, financement, risques, travaux et stratégie patrimoniale.</p>
+          </div>
+          <div class="diff-pillar">
+            <p class="diff-pillar-label">Décision avant action</p>
+            <p class="diff-pillar-text">Nous analysons avant que vous engagiez votre capital. Pas après.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         MÉTHODOLOGIE
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow centered">Comment Klarimo analyse une décision</p>
+        <h2 class="section-title centered">L'analyse Klarimo 360°</h2>
+
+        <div class="method-grid">
+          <div class="method-card">
+            <p class="method-num">01 — Performance</p>
+            <h3 class="method-card-title">Rendement réel</h3>
+            <p class="method-card-text">Quel rendement et quel cash-flow nets après charges, fiscalité et vacance locative ?</p>
+          </div>
+          <div class="method-card">
+            <p class="method-num">02 — Financement</p>
+            <h3 class="method-card-title">Impact du crédit</h3>
+            <p class="method-card-text">Quel effet de levier, quel coût réel après fiscalité et quelles marges de manœuvre ?</p>
+          </div>
+          <div class="method-card">
+            <p class="method-num">03 — Fiscalité</p>
+            <h3 class="method-card-title">Charge fiscale réelle</h3>
+            <p class="method-card-text">Quel impact selon votre TMI, votre régime et la structure de détention ?</p>
+          </div>
+          <div class="method-card">
+            <p class="method-num">04 — Immobilier & Travaux</p>
+            <h3 class="method-card-title">Risques du bien</h3>
+            <p class="method-card-text">Quels risques liés au bien, à sa valorisation et aux travaux envisagés ?</p>
+          </div>
+          <div class="method-card">
+            <p class="method-num">05 — Risques</p>
+            <h3 class="method-card-title">Hypothèses critiques</h3>
+            <p class="method-card-text">Quelles hypothèses pourraient remettre en cause l'opération ou la stratégie ?</p>
+          </div>
+          <div class="method-card">
+            <p class="method-num">06 — Stratégie</p>
+            <h3 class="method-card-title">Cohérence patrimoniale</h3>
+            <p class="method-card-text">Cette décision est-elle cohérente avec vos objectifs globaux et votre horizon ?</p>
+          </div>
+        </div>
+
+        <p class="method-footnote">Une bonne opération sur Excel peut être une mauvaise décision patrimoniale. Klarimo analyse les deux.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         SECTION "VOUS AVEZ TROUVÉ UN BIEN"
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+          <div>
+            <p class="section-eyebrow">Une première analyse avant de vous engager</p>
+            <h2 class="section-title" style="max-width:480px;">Vous avez trouvé un bien ?</h2>
+            <p class="section-text" style="margin-bottom:28px;">Envoyez-nous l'annonce que vous envisagez d'acheter. Nous vous apportons un premier regard sur les principaux points à vérifier avant de vous engager.</p>
+            <a href="analyser-mon-projet.html" class="btn btn-gold">Soumettre mon projet</a>
+          </div>
+          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:32px 28px;">
+            <p style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Ce que Klarimo vérifie</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;"></span>
+                <span style="font-size:13.5px;color:var(--text-2);line-height:1.6;">La cohérence économique de l'opération</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;"></span>
+                <span style="font-size:13.5px;color:var(--text-2);line-height:1.6;">Le rendement réel après charges et fiscalité</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;"></span>
+                <span style="font-size:13.5px;color:var(--text-2);line-height:1.6;">Les hypothèses qui peuvent changer le résultat</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;"></span>
+                <span style="font-size:13.5px;color:var(--text-2);line-height:1.6;">Les risques principaux à anticiper</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;"></span>
+                <span style="font-size:13.5px;color:var(--text-2);line-height:1.6;">La recommandation : GO, GO sous conditions ou NO-GO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         PARCOURS CLIENT
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow centered">Comment ça se passe</p>
+        <h2 class="section-title centered">De votre situation à votre décision.</h2>
+
+        <div class="parcours-steps">
+          <div class="parcours-step">
+            <p class="parcours-num">01 — Échange</p>
+            <h3 class="parcours-step-title">Votre situation</h3>
+            <p class="parcours-step-text">30 minutes pour comprendre votre décision, votre patrimoine et les enjeux. Gratuit, sans engagement.</p>
+          </div>
+          <div class="parcours-arrow">→</div>
+          <div class="parcours-step">
+            <p class="parcours-num">02 — Analyse</p>
+            <h3 class="parcours-step-title">Les chiffres</h3>
+            <p class="parcours-step-text">Vous transmettez les éléments nécessaires. Klarimo analyse les chiffres, les risques et les scénarios.</p>
+          </div>
+          <div class="parcours-arrow">→</div>
+          <div class="parcours-step">
+            <p class="parcours-num">03 — Décision</p>
+            <h3 class="parcours-step-title">Votre décision</h3>
+            <p class="parcours-step-text">Vous repartez avec une recommandation claire et les prochaines actions à mener.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         OFFRES — COMPARATEUR RAPIDE
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow centered">Les accompagnements</p>
+        <h2 class="section-title centered">Choisissez selon votre situation.</h2>
+        <p class="section-text centered">Trois accompagnements distincts selon la nature de votre besoin. Si vous ne savez pas lequel correspond à votre situation, l'échange découverte est fait pour ça.</p>
+
+        <div class="offers-chooser">
+          <a href="offres.html#second-avis" class="offer-choice">
+            <p class="offer-choice-label">Second Avis Immobilier</p>
+            <p class="offer-choice-title">Une décision à prendre.</p>
+            <p class="offer-choice-trigger">J'ai une acquisition, une vente ou une décision ponctuelle à analyser avant de m'engager.</p>
+            <p class="offer-choice-price">590 € TTC · Verdict sous 72 h</p>
+            <span class="offer-choice-cta">Faire analyser ma décision →</span>
+          </a>
+          <a href="offres.html#audit" class="offer-choice">
+            <p class="offer-choice-label">Audit Performance</p>
+            <p class="offer-choice-title">Mon patrimoine à auditer.</p>
+            <p class="offer-choice-trigger">Je veux savoir ce que valent vraiment mes biens, ce qui peut être amélioré et quoi faire en priorité.</p>
+            <p class="offer-choice-price">1 490 € TTC · 1 à 3 biens</p>
+            <span class="offer-choice-cta">Faire auditer mon patrimoine →</span>
+          </a>
+          <a href="offres.html#mission" class="offer-choice">
+            <p class="offer-choice-label">Mission Stratégique</p>
+            <p class="offer-choice-title">Une situation complexe.</p>
+            <p class="offer-choice-trigger">Ma situation implique plusieurs actifs, structures ou décisions qui nécessitent une analyse globale.</p>
+            <p class="offer-choice-price">À partir de 3 000 € TTC</p>
+            <span class="offer-choice-cta">Étudier ma situation →</span>
+          </a>
+        </div>
+
+        <!-- OFFRES DÉTAILLÉES -->
+        <div class="offers-grid">
+
+          <!-- SECOND AVIS -->
+          <div class="offer-card">
+            <div class="offer-card-header">
+              <p class="offer-badge">Une décision · Un avis indépendant</p>
+              <h3 class="offer-card-title">Second Avis Immobilier</h3>
+              <p class="offer-price">590 € <span>TTC</span></p>
+            </div>
+            <div class="offer-card-body">
+              <p class="offer-promise">Avant d'engager votre argent, obtenez une analyse indépendante et chiffrée de votre décision.</p>
+
+              <div class="offer-verdict">
+                <span class="verdict-tag verdict-go">GO</span>
+                <span class="verdict-tag verdict-cond">GO sous conditions</span>
+                <span class="verdict-tag verdict-nogo">NO-GO</span>
+              </div>
+
+              <p class="offer-result-title">À l'issue de l'analyse, vous saurez</p>
+              <ul class="offer-results">
+                <li>Si l'opération est cohérente avec votre situation</li>
+                <li>Quels sont les principaux risques</li>
+                <li>Quelles hypothèses peuvent changer le résultat</li>
+                <li>Quelles conditions réunir pour avancer</li>
+                <li>Quelle décision Klarimo recommande</li>
+              </ul>
+
+              <p class="offer-delay">Verdict sous 72 h après réception des éléments</p>
+            </div>
+            <div class="offer-card-footer">
+              <a href="contact.html" class="btn btn-outline" style="width:100%;text-align:center;">Faire analyser ma décision</a>
+            </div>
+          </div>
+
+          <!-- AUDIT PERFORMANCE -->
+          <div class="offer-card featured">
+            <div class="offer-card-header">
+              <p class="offer-badge">1 à 3 biens</p>
+              <h3 class="offer-card-title">Audit Performance</h3>
+              <p class="offer-price">1 490 € <span>TTC</span></p>
+            </div>
+            <div class="offer-card-body">
+              <p class="offer-promise">Découvrez ce que votre patrimoine immobilier vous rapporte réellement, ce qui peut être amélioré et les décisions à prendre en priorité.</p>
+
+              <p class="offer-result-title">À l'issue de l'audit, vous disposerez</p>
+              <ul class="offer-results">
+                <li>D'une vision consolidée de votre patrimoine</li>
+                <li>De la performance réelle de chaque actif</li>
+                <li>Des principaux risques identifiés</li>
+                <li>Des opportunités d'amélioration</li>
+                <li>D'un plan d'action Klarimo priorisé</li>
+                <li>D'une restitution de 60 minutes + 30 jours de suivi</li>
+              </ul>
+
+              <p class="offer-delay">Quick win : premiers points clés sous 48 h</p>
+            </div>
+            <div class="offer-card-footer">
+              <a href="contact.html" class="btn btn-gold" style="width:100%;text-align:center;">Faire auditer mon patrimoine</a>
+            </div>
+          </div>
+
+          <!-- MISSION STRATÉGIQUE -->
+          <div class="offer-card">
+            <div class="offer-card-header">
+              <p class="offer-badge">Situations complexes</p>
+              <h3 class="offer-card-title">Mission Stratégique</h3>
+              <p class="offer-price">À partir de 3 000 € <span>TTC</span></p>
+            </div>
+            <div class="offer-card-body">
+              <p class="offer-promise">Pour les décisions immobilières qui ne peuvent pas être résumées à un simple calcul de rentabilité.</p>
+
+              <p class="offer-result-title">Adapté à votre situation si vous avez</p>
+              <ul class="offer-results">
+                <li>Un portefeuille de plusieurs actifs ou SCI</li>
+                <li>Une acquisition ou restructuration complexe</li>
+                <li>Des arbitrages multiples à analyser</li>
+                <li>Une problématique de transmission</li>
+                <li>Une stratégie patrimoniale à construire</li>
+              </ul>
+
+              <p class="offer-delay">Périmètre et tarif définis après l'échange découverte</p>
+            </div>
+            <div class="offer-card-footer">
+              <a href="contact.html" class="btn btn-outline" style="width:100%;text-align:center;">Étudier ma situation</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COPILOTE -->
+        <div class="copilote-card">
+          <div>
+            <p class="copilote-badge">Accompagnement continu</p>
+            <h3 class="copilote-title">Le Copilote Klarimo</h3>
+            <p class="copilote-price">À partir de 190 €<span style="font-size:14px;font-weight:400;color:var(--text-3);">/mois</span></p>
+            <p class="copilote-sub">Parce qu'une stratégie immobilière ne s'arrête pas à la remise d'un rapport.</p>
+            <a href="contact.html" class="btn btn-outline">Découvrir le Copilote</a>
+          </div>
+          <div>
+            <div class="copilote-items">
+              <p class="copilote-item">Actualisation périodique de la stratégie</p>
+              <p class="copilote-item">Suivi de la performance</p>
+              <p class="copilote-item">Questions ponctuelles</p>
+              <p class="copilote-item">Relecture de documents</p>
+              <p class="copilote-item">Second regard avant décision</p>
+              <p class="copilote-item">Points stratégiques réguliers</p>
+              <p class="copilote-item">Alertes pertinentes</p>
+              <p class="copilote-item">Coordination avec vos professionnels</p>
+            </div>
+            <p style="font-size:12px;color:var(--text-3);margin-top:16px;">Le Copilote est principalement proposé aux clients ayant déjà réalisé une mission Klarimo. Le tarif exact dépend de la taille et de la complexité du patrimoine.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         CAS CLIENTS — COMPOSANT PRÉPARÉ, NON AFFICHÉ
+    ══════════════════════════════════════════════ -->
+    <section class="section cases-section" id="cas-clients">
+      <div class="container">
+        <p class="section-eyebrow centered">Cas clients</p>
+        <h2 class="section-title centered">Des décisions analysées, des résultats mesurés.</h2>
+        <div class="cases-grid">
+          <!-- Composant à activer dès disponibilité de vrais dossiers anonymisés -->
+          <!-- Structure : Situation / Analyse / Point identifié / Verdict / Impact -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         ÉCHANGE DÉCOUVERTE
+    ══════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="decouverte-box">
+          <h2>Une décision immobilière peut engager plusieurs années de votre patrimoine.</h2>
+          <p>Avant de la prendre, obtenez un regard indépendant, chiffré et sans intérêt dans la transaction.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-gold">Parler de ma situation</a>
+            <a href="analyser-mon-projet.html" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:0.5px solid rgba(255,255,255,0.25);">Soumettre un projet immobilier</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial indépendant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://klarimo.fr/#organization",
+        "name": "Klarimo",
+        "description": "Conseil immobilier patrimonial indépendant. Rémunéré exclusivement sur honoraires, sans commission, sans conflit d'intérêts.",
+        "url": "https://klarimo.fr",
+        "email": "contact@klarimo.fr",
+        "logo": "https://klarimo.fr/klarimo-logo-full.svg",
+        "areaServed": { "@type": "Country", "name": "France" },
+        "founder": {
+          "@type": "Person",
+          "name": "Tom Vinet",
+          "jobTitle": "Fondateur, Conseiller immobilier patrimonial indépendant"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://klarimo.fr/#website",
+        "url": "https://klarimo.fr",
+        "name": "Klarimo",
+        "publisher": { "@id": "https://klarimo.fr/#organization" },
+        "inLanguage": "fr-FR"
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>

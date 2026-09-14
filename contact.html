@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parler de ma situation — Klarimo</title>
+  <meta name="description" content="Échange découverte gratuit de 30 minutes. Présentez votre situation, votre décision et vos objectifs. Klarimo vous recommande l'accompagnement adapté.">
+  <link rel="icon" type="image/svg+xml" href="klarimo-favicon.svg">
+  <meta property="og:title" content="Parler de ma situation — Klarimo">
+  <meta property="og:url" content="https://klarimo.fr/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://klarimo.fr/klarimo-og.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 80px 0;
+      align-items: start;
+    }
+
+    .contact-left h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .contact-left p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .contact-eyebrow {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .contact-promise {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .contact-promise p {
+      font-size: 13.5px;
+      color: var(--navy);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .contact-infos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .contact-info-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .contact-info-text {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    .contact-info-text strong {
+      color: var(--navy);
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .contact-form-box {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 36px;
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 6px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 14px;
+      color: var(--navy);
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: 7px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--navy);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
+    }
+
+    .form-note {
+      font-size: 11.5px;
+      color: var(--text-3);
+      margin-top: 12px;
+      line-height: 1.55;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .calendly-separator {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .calendly-separator span {
+      font-size: 12px;
+      color: var(--text-3);
+      white-space: nowrap;
+    }
+
+    .calendly-separator::before,
+    .calendly-separator::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+    }
+
+    .calendly-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: 0.5px solid var(--border);
+      border-radius: 7px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 14px;
+      color: var(--navy);
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .calendly-btn:hover {
+      border-color: var(--navy);
+      background: var(--gold-light);
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">KLAR<span>IMO</span></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta active">Parler de ma situation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <p class="contact-eyebrow">Échange découverte</p>
+          <h1>Parlons de votre situation.</h1>
+
+          <p>Décrivez votre décision ou votre patrimoine en quelques lignes. Klarimo revient vers vous sous 24 heures pour organiser un échange de 30 minutes.</p>
+
+          <div class="contact-promise">
+            <p>Vous n'avez pas à choisir un accompagnement avant que nous ayons compris votre situation. Si Klarimo peut vous apporter de la valeur, nous vous recommandons l'accompagnement adapté. Sinon, nous vous le disons.</p>
+          </div>
+
+          <div class="contact-infos">
+            <div class="contact-info-item">
+              <div class="contact-info-dot"></div>
+              <div class="contact-info-text">
+                <strong>Échange gratuit</strong>
+                30 minutes, sans engagement, pour comprendre votre situation.
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-dot"></div>
+              <div class="contact-info-text">
+                <strong>Réponse sous 24 h</strong>
+                Du lundi au vendredi.
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-dot"></div>
+              <div class="contact-info-text">
+                <strong>100 % honoraires</strong>
+                Aucune commission. Aucun produit à vendre.
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-dot"></div>
+              <div class="contact-info-text">
+                <strong>Contact direct</strong>
+                <a href="mailto:contact@klarimo.fr" style="color:var(--navy);">contact@klarimo.fr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-box">
+          <p class="form-title">Décrivez votre situation</p>
+
+          <form name="contact" method="POST" data-netlify="true" action="merci.html">
+            <input type="hidden" name="form-name" value="contact">
+
+            <div class="form-group">
+              <label class="form-label" for="prenom">Prénom et nom</label>
+              <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.fr" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sujet">Votre situation</label>
+              <select class="form-select" id="sujet" name="sujet">
+                <option value="">Sélectionnez...</option>
+                <option value="second-avis">J'ai une décision à faire analyser (Second Avis)</option>
+                <option value="audit">Je veux auditer mon patrimoine (Audit Performance)</option>
+                <option value="mission">Ma situation est complexe (Mission Stratégique)</option>
+                <option value="copilote">Je cherche un accompagnement continu (Copilote)</option>
+                <option value="autre">Autre ou je ne sais pas encore</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Décrivez votre situation en quelques lignes</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Quel est votre projet ou votre patrimoine actuel ? Quelle décision souhaitez-vous analyser ?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold form-submit">Envoyer ma demande</button>
+
+            <div class="calendly-separator"><span>ou</span></div>
+
+            <a href="https://calendly.com/tom-vinet11/nouvelle-reunion" target="_blank" class="calendly-btn">
+              Réserver directement un créneau →
+            </a>
+
+            <p class="form-note">Vos informations sont strictement confidentielles et utilisées uniquement pour organiser votre échange. Conformément au RGPD, vous disposez d'un droit d'accès et de suppression à tout moment.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">KLAR<span>IMO</span></a>
+      <span class="footer-copy">Conseil immobilier patrimonial indépendant</span>
+      <div class="footer-links">
+        <a href="offres.html">Offres</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
