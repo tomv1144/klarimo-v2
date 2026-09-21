@@ -85,4 +85,9 @@
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://klarimo.fr/articles/taxe-fonciere-2026-bailleurs.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
