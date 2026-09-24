@@ -90,4 +90,9 @@
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://klarimo.fr/articles/deficit-foncier-2026-plafond-imputation.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
