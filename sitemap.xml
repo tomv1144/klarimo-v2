@@ -150,4 +150,9 @@
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://klarimo.fr/articles/vacance-locative-calcul-rendement-2026.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
